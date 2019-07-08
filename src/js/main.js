@@ -13,7 +13,9 @@ function scroll() {
     const menu = document.querySelector(".nav__list--js");
     const arrow = document.querySelector(".arrow-up--js")
     window.onscroll = () => {
-        menu ? menu.classList.remove("nav__list--js") : "";
+        if (menu.classList.contains("nav__list--open")) {
+            menu.classList.remove("nav__list--open")
+        }
     };
     if (scrollY > 0) {
         header.style.opacity = 0.5;
