@@ -69,6 +69,16 @@ body {
         color: #0000a0;
         font-size: 0.8rem;
         float: right;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: #0000a0;
+        background-image: linear-gradient(to right,#3C2435, red 50%, #d0e2f2 50%);
+        background-size: 200% 100%;
+        background-position: 100%;
+        &:hover {
+            // color:#3C2435;
+            transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
+            background-position: 0%;
+        }
     }
     &__image {
         max-width: 200px;
@@ -82,8 +92,8 @@ body {
         color: #153a5e;
         text-align: center;
         &::before {
-          content: '✔️';
-          margin-right: 8px;
+            content: "✔️";
+            margin-right: 8px;
         }
     }
     &:nth-last-child(1):nth-child(odd) {
@@ -235,6 +245,7 @@ body {
         min-width: 3.5rem;
         height: auto;
         padding: 2rem 0.4rem;
+        transition: background-color 0.2s ease-out;
         &:hover {
             background-color: #8aa6bf;
         }
