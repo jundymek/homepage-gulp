@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -368,7 +369,19 @@ body {
   .day__link {
     color: #0000a0;
     font-size: 0.8rem;
-    float: right; }
+    float: right;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #0000a0;
+    background-image: -webkit-gradient(linear, left top, right top, from(#3C2435), color-stop(50%, red), color-stop(50%, #d0e2f2));
+    background-image: -o-linear-gradient(left, #3C2435, red 50%, #d0e2f2 50%);
+    background-image: linear-gradient(to right, #3C2435, red 50%, #d0e2f2 50%);
+    background-size: 200% 100%;
+    background-position: 100%; }
+    .day__link:hover {
+      -webkit-transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
+      -o-transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
+      transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
+      background-position: 0%; }
   .day__image {
     max-width: 200px;
     float: left; }
@@ -378,6 +391,9 @@ body {
   .day__title {
     color: #153a5e;
     text-align: center; }
+    .day__title::before {
+      content: "✔️";
+      margin-right: 8px; }
   .day:nth-last-child(1):nth-child(odd) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
@@ -517,7 +533,7 @@ body {
   text-align: right;
   grid-area: nav; }
 
-@media (max-width: 768px) {
+@media (max-width: 768px){
     .header__hamburger {
     -ms-grid-row: 1;
     -ms-grid-column: 2; }
@@ -534,7 +550,10 @@ body {
   .nav__item {
     min-width: 3.5rem;
     height: auto;
-    padding: 2rem 0.4rem; }
+    padding: 2rem 0.4rem;
+    -webkit-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
     .nav__item:hover {
       background-color: #8aa6bf; }
     @media (max-width: 768px) {
