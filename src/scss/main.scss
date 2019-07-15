@@ -81,6 +81,10 @@ body {
     &__title {
         color: #153a5e;
         text-align: center;
+        &::before {
+          content: '✔️';
+          margin-right: 8px;
+        }
     }
     &:nth-last-child(1):nth-child(odd) {
         grid-column: 1 / 3;
