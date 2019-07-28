@@ -1,7 +1,7 @@
 "use strict";
 
 function openMenu() {
-    console.log("opem");
+    console.log("opemss");
     const hamburger = document.querySelector(".fas--js");
     const menu = document.querySelector(".nav__list--js");
     const hamburgerClose = document.querySelector(".header__hamburger--close-js")
@@ -9,6 +9,15 @@ function openMenu() {
     menu.classList.toggle("nav__list--open");
     hamburger.classList.toggle("fas")
     hamburger.classList.toggle("fa-bars")
+}
+
+function scroll() {
+    const arrow = document.querySelector(".arrow-up--js")
+    if (scrollY > 0) {
+        arrow.style.display = 'block'
+    } else {
+        arrow.style.display = 'none'
+    }
 }
 
 function changer() {
