@@ -5,7 +5,7 @@ function openMenu() {
     const menu = document.querySelector(".nav__list--js");
     menu.classList.toggle("nav__list--open");
     const header = document.querySelector(".header--js");
-    header.style.opacity = 1;
+    header.style.opacity = .8;
 }
 
 function scroll() {
@@ -21,7 +21,7 @@ function scroll() {
         header.style.opacity = 0.5;
         arrow.style.display = 'block'
     } else {
-        header.style.opacity = 1;
+        // header.style.opacity = 1;
         arrow.style.display = 'none'
     }
 }
