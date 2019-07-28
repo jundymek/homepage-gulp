@@ -7,11 +7,8 @@ function openMenu() {
     const hamburgerClose = document.querySelector(".header__hamburger--close-js")
     hamburgerClose.classList.toggle("header__hamburger--close")
     menu.classList.toggle("nav__list--open");
-    hamburger.classList.toggle("fab--animate")
     hamburger.classList.toggle("fas")
     hamburger.classList.toggle("fa-bars")
-    const header = document.querySelector(".header--js");
-    header.style.opacity = .8;
 }
 
 function changer() {
