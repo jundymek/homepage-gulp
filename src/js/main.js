@@ -8,24 +8,6 @@ function openMenu() {
     header.style.opacity = .8;
 }
 
-function scroll() {
-    const header = document.querySelector(".header--js");
-    const menu = document.querySelector(".nav__list--js");
-    const arrow = document.querySelector(".arrow-up--js")
-    window.onscroll = () => {
-        if (menu.classList.contains("nav__list--open")) {
-            menu.classList.remove("nav__list--open")
-        }
-    };
-    if (scrollY > 0) {
-        header.style.opacity = 0.5;
-        arrow.style.display = 'block'
-    } else {
-        // header.style.opacity = 1;
-        arrow.style.display = 'none'
-    }
-}
-
 function changer() {
     const el = document.querySelector(".tofill");
     if (el.innerHTML.length) {

@@ -256,11 +256,7 @@ body {
         }
         @media (max-width: 768px) {
             display: flex;
-            align-items: center;
-            // border-bottom: 1px solid black;
-            padding: 5px 5px;
-            text-align: left;
-            // background: transparent;
+            padding: 15px 0;
         }
     }
     &__link {
@@ -272,7 +268,7 @@ body {
         }
         @media (max-width: 768px) {
             text-decoration: none;
-            font-size: 40px;
+            font-size: 2.2rem;
         }
     }
     &__list {
@@ -294,10 +290,9 @@ body {
             background: transparent;
             align-items: center;
             z-index: -1;
-            // max-height: 500px;
             visibility: visible;
             transition: 1s;
-            margin-top: -60px;
+            margin-top: -160px;
         }
     }
 }
